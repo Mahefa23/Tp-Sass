@@ -11,7 +11,9 @@ $fonts1: "Inter", sans-serif;
 $fonts2: "Merri", serif;
 $white: rgb(252, 252, 252);
 $black: rgb(17, 17, 17);
-$grey: rgb(206, 206, 206);
+$grey1: rgb(206, 206, 206);
+$grey2: rgb(231, 231, 231);
+$grey3: grey;
 
 @mixin title{
     font-family: $fonts1;
@@ -61,7 +63,7 @@ body{
 .btn{
     background: none;
     border: 1px solid rgba(0, 0, 0, 0.568);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     @include title;
     padding: 8px 25px;
     cursor: pointer;

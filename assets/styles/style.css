@@ -60,7 +60,7 @@ body::before {
 .btn {
   background: none;
   border: 1px solid rgba(0, 0, 0, 0.568);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -119,7 +119,7 @@ header h1 {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 3.3rem;
+  font-size: 4rem;
   letter-spacing: 6px;
 }
 header p {
@@ -146,7 +146,277 @@ header span {
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
+header nav {
+  background: rgba(255, 255, 255, 0.247);
+  color: rgb(252, 252, 252);
+  width: 85%;
+  margin: 0 auto;
+  height: 65px;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .left-nav:hover li:not(:hover) {
+  background: none;
+  color: rgb(252, 252, 252);
+}
+header nav .left-nav li {
+  font-size: 0.7rem;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 0 15px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+header nav .left-nav li:first-child {
+  background: rgb(252, 252, 252);
+  color: rgb(17, 17, 17);
+}
+header nav .left-nav li:hover {
+  background: rgb(252, 252, 252);
+  color: rgb(17, 17, 17);
+}
+header nav .right-nav {
+  font-size: 1.1rem;
+  min-width: 100px;
+  width: 25%;
+  max-width: 300px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+header nav .right-nav li {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+header nav .right-nav li:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
 
-img {
-  width: 50%;
+main {
+  background: rgb(252, 252, 252);
+  width: 85%;
+  margin: 0 auto 30px;
+}
+main img {
+  width: 100%;
+}
+main .section-1 {
+  width: 80%;
+  margin: 0 auto;
+}
+main .section-1 span {
+  padding: 65px 0;
+  position: relative;
+  display: block;
+}
+main .section-1 span::before, main .section-1 span::after {
+  content: "";
+  position: absolute;
+  width: 37%;
+  height: 1px;
+  background: rgb(206, 206, 206);
+  top: 50%;
+}
+@media screen and (max-width: 760px) {
+  main .section-1 span::before, main .section-1 span::after {
+    width: 30%;
+  }
+}
+main .section-1 span::before {
+  left: 0;
+}
+main .section-1 span::after {
+  right: 0;
+}
+main .section-1 h2 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+}
+main .section-1 p {
+  width: 70%;
+  margin: 35px auto;
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 35px;
+}
+main .section-1 .btn {
+  margin: 35px 0 60px;
+}
+main .section-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid rgb(206, 206, 206);
+}
+main .section-2 .left-part,
+main .section-2 .right-part {
+  padding: 60px;
+}
+main .section-2 .left-part span,
+main .section-2 .right-part span {
+  font-size: 0.75rem;
+}
+main .section-2 .left-part h3,
+main .section-2 .right-part h3 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 25px 0;
+}
+main .section-2 .left-part p,
+main .section-2 .right-part p {
+  font-size: 0.78rem;
+  margin: 25px 0;
+  line-height: 25px;
+  text-align: left;
+}
+main .section-2 .left-part {
+  border-right: 1px solid rgb(206, 206, 206);
+}
+main .section-2 .btn {
+  margin: 0 0 40px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+main .section-2 .btn:hover {
+  background: rgb(17, 17, 17);
+  color: rgb(252, 252, 252);
+}
+
+footer {
+  background: rgb(231, 231, 231);
+  width: 85%;
+  min-height: 640px;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+footer form {
+  display: grid;
+  gap: 18px;
+  padding: 60px 50px;
+  grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+}
+footer form input[type=text], footer form textarea {
+  background: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.349);
+}
+footer form textarea {
+  resize: none;
+}
+footer form label {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+footer form .submit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+footer form .submit-container .btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  color: grey;
+}
+footer .right-foot {
+  border-left: 1px solid rgb(206, 206, 206);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+footer .right-foot div {
+  border-bottom: 1px solid rgb(206, 206, 206);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .right-foot div h4 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  color: grey;
+}
+footer .right-foot div p {
+  color: grey;
+  font-size: 0.8rem;
+}
+footer .right-foot .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 60px;
+  width: 80%;
+}
+footer .right-foot .social ul li a {
+  color: rgb(17, 17, 17);
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+footer .right-foot .social ul li a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,90 @@
-img{
-    width: 50%;
+main{
+    background: $white;
+    width: 85%;
+    margin: 0  auto  30px;
+
+    img{
+        width: 100%;
+    }
+    .section-1{
+        width: 80%;
+        margin: 0 auto;
+
+        span{
+            padding: 65px  0;
+            position: relative;
+            display: block;
+
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                width: 37%;
+                height: 1px;
+                background: $grey1;
+                top: 50%;
+
+                @media screen and (max-width: 760px){
+                    width:  30%;
+                }
+            }
+            &::before{
+                left: 0;
+            }
+            &::after{
+                right: 0;
+            }
+        }
+        h2{
+            @include title;
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+        }
+        p{
+            width: 70%;
+            margin: 35px auto;
+            font-size: .72rem;
+            font-style: italic;
+            line-height: 35px;
+        }
+        .btn{
+            margin: 35px 0  60px;
+        }
+    }
+    .section-2{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-top: 1px solid $grey1;
+
+
+        .left-part,
+        .right-part{
+            padding: 60px;
+
+            span{
+                font-size: .75rem;
+            }
+            h3{
+                @include title;
+                margin: 25px 0;
+            }
+            p{
+                font-size: .78rem;
+                margin: 25px 0;
+                line-height: 25px;
+                text-align: left;
+            }
+        }
+
+        .left-part{
+            border-right: 1px solid $grey1;
+        }
+        .btn{
+            margin: 0 0 40px;
+            transition: 0.3s ease;
+            &:hover{
+                background: $black;
+                color: $white;
+            }
+        }
+    }
 }
