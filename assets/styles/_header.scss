@@ -1,0 +1,45 @@
+header{
+    color: $white;
+    position: relative;
+    min-height: 100vh;
+
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        opacity: 0;
+        transform: translateY(40px);
+        animation:  headerAnim 1.5s forwards;
+
+        @keyframes headerAnim{
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+    h1{
+        @include title;
+        font-size: 3.3rem;
+        letter-spacing: 6px;
+    }
+    p{
+        font-size: 0.8rem;
+        width: 80%;
+        margin: 40px 0 35px;
+        font-style: italic;
+    }
+    span{
+        border: 1px solid $white;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        transition: 0.1s;
+    }
+}
